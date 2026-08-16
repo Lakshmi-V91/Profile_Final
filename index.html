@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<div class="cursor-glow" id="cursorGlow"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Lakshmi Vinod — Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+  <meta name="description" content="Personal portfolio of Lakshmi :), BTech ISE student." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,400..600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- WORLD 1 AMBIENT BACKGROUND ANIMATION CANVAS -->
+  <canvas id="world1Canvas" class="bg-canvas" aria-hidden="true"></canvas>
+
+  <!-- WORLD 2 MATRIX BACKGROUND ANIMATION CANVAS -->
+  <canvas id="matrixCanvas" class="bg-canvas matrix-canvas" aria-hidden="true"></canvas>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- NAVIGATION -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <a href="#hero" class="nav__brand">LV<span class="nav__brand-dot">.</span></a>
+
+      <button
+        class="nav__toggle"
+        id="navToggle"
+        aria-expanded="false"
+        aria-controls="navMenu"
+        aria-label="Open navigation menu"
+      >
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#education" class="nav__link">Education</a></li>
+        <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#hobbies" class="nav__link">Hobbies</a></li>
+        <li><a href="#contact" class="nav__link nav__link--cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- SECTION 1 — HERO / INTRODUCTION (WORLD 1) -->
+    <section class="section hero" id="hero">
+      <div class="hero__decor" aria-hidden="true">
+        <span class="blob blob--one"></span>
+        <span class="blob blob--two"></span>
+        <span class="blob blob--three"></span>
+      </div>
+
+      <div class="hero__stage">
+        <!-- GLOWING LV PORTRAIT -->
+        <div class="hero__avatar-wrap">
+          <div class="hero__avatar-glow" aria-hidden="true"></div>
+          <div class="hero__avatar-box">
+            <span class="hero__avatar-text">LV</span>
+          </div>
+        </div>
+
+        <h1 class="hero__name">Lakshmi Vinod</h1>
+        <p class="hero__degree">BTech - ISE</p>
+        <p class="hero__tagline">Hi! I am a human being. Definitely not an alien from Mars or an escaped AI model. Shh, nothing sus. I enjoy consuming oxygen, writing code that works on the third try, and listening to music on repeat.</p>
+
+        <a href="#intro" class="hero__scroll-cue" aria-label="Scroll to introduction">
+          <span class="hero__scroll-cue-line"></span>
+          Scroll for more definitely human, non-alien info about me :D
+        </a>
+      </div>
+    </section>
+
+    <!-- SECTION 2 — SHORT INTRO (WORLD 1) -->
+    <section class="section intro" id="intro">
+      <div class="section__inner intro__grid">
+        <div class="intro__text reveal">
+          <p class="eyebrow">Hello, I'm</p>
+          <h2 class="section__heading">A little about me</h2>
+          <p class="intro__paragraph">
+            Greetings fellow human! I am Lakshmi Vinod, a first year BTech ISE student studying at Nitte Meenakshi Institute of Technology.
+          </p>
+          <p class="intro__paragraph">
+            I like listening to music and scrolling through yt shorts✌️
+          </p>
+        </div>
+
+        <div class="intro__media reveal">
+          <img src="images/selfpic2.jpeg" alt="Lakshmi candid" class="hero__photo-placeholder" />
+        </div>
+        <span class="intro__media-glow" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <!-- SECTION 3 — EDUCATION ROADMAP (WORLD 1) -->
+    <section class="section education" id="education">
+      <div class="section__inner">
+        <p class="eyebrow reveal">level_progression.log</p>
+        <h2 class="section__heading reveal">Education Roadmap</h2>
+
+        <div class="roadmap">
+          <div class="roadmap__item reveal">
+            <div class="roadmap__node">01</div>
+            <div class="roadmap__content">
+              <span class="roadmap__tag">LKG — 12th Grade</span>
+              <h3 class="roadmap__title">Shishya BEML Public School</h3>
+              <p class="roadmap__desc">The tutorial level. Where foundational human skills were acquired and tests were survived.</p>
+            </div>
+          </div>
+
+          <div class="roadmap__connector reveal" aria-hidden="true"></div>
+
+          <div class="roadmap__item reveal">
+            <div class="roadmap__node roadmap__node--active">02</div>
+            <div class="roadmap__content">
+              <span class="roadmap__tag">BTech — Information Science &amp; Engineering</span>
+              <h3 class="roadmap__title">Nitte Meenakshi Institute of Technology</h3>
+              <p class="roadmap__desc">Currently upgrading firmware, compiling code, and completely blending in with human society.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         TRANSITION: TERMINAL SCREEN BREAK
+         ============================================================ -->
+    <section class="section terminal-break" id="terminal-break">
+      <div class="section__inner terminal-container reveal">
+        <div class="terminal-box">
+          <div class="terminal__header">
+            <span class="terminal__dot terminal__dot--red"></span>
+            <span class="terminal__dot terminal__dot--yellow"></span>
+            <span class="terminal__dot terminal__dot--green"></span>
+            <span class="terminal__title">kernel_switch.sh</span>
+          </div>
+          <div class="terminal__body font-mono">
+            <div id="typewriterTerminal"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         WORLD 2: CODING / TERMINAL WORLD
+         ============================================================ -->
+
+    <!-- SECTION 4 — SKILLS (WORLD 2) -->
+    <section class="section skills world-two-section" id="skills">
+    
+      <div class="section__inner">
+
+        <p class="eyebrow">lakshmi@portfolio:/skills$ ls -la</p>
+        <h2 class="section__heading type-heading" data-text="./load_skills.sh"></h2>
+
+        <ul class="card-grid reveal">
+          <li class="card terminal-card">
+          <span class="card__icon" aria-hidden="true"><01></span>
+            <div class="card__visual">
+              <img src="images/coding-matrix.gif" alt="Coding animation" class="skill-gif" />
+            </div>
+            <br></br>
+            <h3 class="card__title">Problem Solving</h3>
+            <p class="card__text">I can usually fix problems efficiently under stress/high pressure situations. Also, I love writing code to untangle logic puzzles and turn complex bugs into satisfying green checkmarks.</p>
+          </li>
+          <li class="card terminal-card">
+            <span class="card__icon" aria-hidden="true"><02></span>
+            <div class="card__visual">
+              <img src="images/imagination.gif" alt="Coding animation" class="skill-gif" />
+            </div>
+            <br></br>
+            <h3 class="card__title">Imagination</h3>
+            <p class="card__text">I have a wild imagination and can vividly visualize entire concepts and turn abstract ideas into reality.</p>
+          </li>
+          <li class="card terminal-card">
+            <span class="card__icon" aria-hidden="true"><03></span>
+            <div class="card__visual">
+              <img src="images/loading.gif" alt="Coding animation" class="skill-gif" />
+            </div>
+            <br></br>
+            <h3 class="card__title">Loading...</h3>
+            <p class="card__text">Unfortunately, my other hidden talents are still currently hiding 🥀</p>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- SECTION 5 — HOBBIES (WORLD 2) -->
+    <section class="section hobbies world-two-section" id="hobbies">
+      <div class="section__inner">
+
+        <p class="eyebrow">lakshmi@portfolio:/hobbies$ ls -la</p>
+        <h2 class="section__heading type-heading" data-text="hobbies"></h2>
+
+        <ul class="tile-grid reveal">
+          <li class="tile terminal-tile">
+            <div class="tile__header-tag">HOBBY_01</div>
+            <div class="card__visual">
+              <img src="images/music.gif" alt="Coding animation" class="skill-gif" />
+            </div>
+            <h3 class="tile__title">Music🎶</h3>
+            <p class="tile__text">I love discovering music I love and resonate with lyrically and listening to it on repeat.</p>
+          </li>
+          <li class="tile terminal-tile">
+            <div class="tile__header-tag">HOBBY_02</div>
+            <div class="card__visual">
+              <img src="images/movie.gif" alt="Coding animation" class="skill-gif" />
+            </div>
+            <h3 class="tile__title">Movies/Series🎥</h3>
+            <p class="tile__text">I love watching visual media, their analysis and how the audience reacts to it!!</p>
+          </li>
+          <li class="tile terminal-tile">
+            <div class="tile__header-tag">HOBBY_02</div>
+            <div class="card__visual">
+              <img src="images/art.gif" alt="Coding animation" class="skill-gif" />
+            </div>
+            <h3 class="tile__title">Art!</h3>
+            <p class="tile__text">I draw art through some Pinterest inspiration or create my own animations to songs I love :)</p>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- SECTION 6 — CONTACT (WORLD 2) -->
+    <section class="section contact world-two-section" id="contact">
+      <div class="section__inner contact__inner">
+
+        <p class="eyebrow reveal">&gt; CONTACT</p>
+        <h2 class="section__heading reveal type-heading" data-text="Get in touch! :)"></h2>
+        <p class="contact__lead reveal">
+          Feel free to drop a hi!
+        </p>
+
+        <div class="contact__details reveal terminal-contact-box">
+          <a class="contact__detail" href="mailto:lakshmivins.09@gmail.com">
+            <span class="contact__detail-label">EMAIL:</span>
+            <span class="contact__detail-value">lakshmivins.09@gmail.com</span>
+          </a>
+          <!--<div class="contact__detail">
+            <span class="contact__detail-label">PHONE:</span>
+            <span class="contact__detail-value">[+91 XXXXX XXXXX]</span>
+          </div> -->
+        </div>
+
+        <div class="contact__socials reveal">
+          <a href="https://github.com/Lakshmi-V91" class="contact__social terminal-social-btn">GITHUB: Lakshmi-V91</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer world-two-footer">
+    <p>&gt; Designed &amp; built by Lakshmi Vinod · <span id="year"></span> // KERNEL_ACTIVE</p>
+  </footer>
+
+  <button
+    class="back-to-top"
+    id="backToTop"
+    aria-label="Back to top"
+    title="Back to top"
+  >
+    ↑
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
